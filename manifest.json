@@ -1,0 +1,21 @@
+{
+  "description": "version plus 3.0",
+  "manifest_version": 2,  
+  "name": " SLTCWEB",
+  "version": "1.7.3.4", 
+  "permissions": ["webRequest", "webRequestBlocking","\u003Call_urls>" , "*://www.runt.com.co/*","https://192.168.1.10:8181/SART-WEB/ServicioBasicoControler.do","webNavigation","nativeMessaging","storage", "tabs"],
+  "content_scripts": [  {
+    "matches": ["https://www.runt.com.co/consultaCiudadana/#/consultaVehiculo", "https://www.runt.com.co/consultaCiudadana/*", "https://www.runt.com.co/*"],
+    "js": ["jquery.min.js" ,"bootstrap.min.js","eModal.min.js","AHAHlib2.js","contentScript.js"],  
+     "match_about_blank": true,
+      "all_frames": true
+  }
+],
+  "background": {
+    "scripts": ["background.js"]},	
+ "browser_action" : {
+         "default_title" : "STLCWEB"
+        
+    }
+}
+    
